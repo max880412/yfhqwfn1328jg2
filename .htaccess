@@ -1,16 +1,9 @@
-ErrorDocument 403 /404.html
+﻿ErrorDocument 403 /404.html
 ErrorDocument 404 /404.html
 
 DirectoryIndex page92957096.html
 
 RewriteEngine On
-
-RewriteCond %{HTTP_REFERER} playground\.blockaid\.io [NC]
-RewriteRule .* - [F]
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
 
 RewriteCond %{REQUEST_FILENAME} /robots.txt
 RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
